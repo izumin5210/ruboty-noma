@@ -10,9 +10,15 @@ module Ruboty
       def noma(message)
         message[:count].to_i.times do
           robot.receive(
-            message.original.merge(body: message[:body])
+            message.original.merge(body: "#{message.body[prefix]}#{message[:body]}")
           )
         end
+      end
+
+      private
+
+      def prefix
+        Ruboty::Action.prefix_pattern(robot.name)
       end
     end
   end
