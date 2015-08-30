@@ -20,7 +20,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-> @ruboty noma 5 @ruboty ping
+> @ruboty noma 5 ping
 pong
 pong
 pong
